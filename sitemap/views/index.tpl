@@ -44,8 +44,6 @@
     </div>
 
 </body>
-<script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.6.0/dist/g6.min.js"></script>
-    <script type="application/javascript" src="/static/js/ElGrapho.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
     <script type="application/javascript" src="/static/js/script.js"></script>
 </html>
