@@ -1,8 +1,8 @@
-#SITE MAPPER
+# SITE MAPPER
 
 Generate site's map in json and visualize it with d3 library
 
-###JSON FORMAT:
+### JSON FORMAT:
 ```
 {
     "page": <str> -- url of page
@@ -13,7 +13,7 @@ Generate site's map in json and visualize it with d3 library
 ```
 \*Robot skip files inside `iframe`
 
-###USAGE
+### USAGE
 The easiest way to run robot - docker:
 ```
 docker-compose up
