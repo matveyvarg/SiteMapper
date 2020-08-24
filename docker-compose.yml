@@ -1,0 +1,28 @@
+version: '3'
+services:
+  sitemap: &sitemap
+    volumes:
+      - .:/app
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    ports:
+    - "8080:8080"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8080
+    depends_on:
+      - redis
+
+  redis:
+    ports:
+      - "6379"
+    image: redis:5.0
+
+  celeryworker:
+    <<: *sitemap
+    image: sitemap_celeryworker
+    depends_on:
+      - redis
+    ports: []
+    command: ["celery", "-A", "sitemap.tasks", "worker"]
